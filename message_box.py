@@ -1,8 +1,15 @@
+"""
+A simple message box implementation in Python. Able to both send and recieve messages.
+"""
+
 # Joshua Sano
 DEFAULT_SIZE = 10
 
 
 class MessageBox:
+    """
+    A simple message box class that can send and receive messages.
+    """
     def __init__(self, num_entries=DEFAULT_SIZE):
         self.my_size = num_entries
         self.count = 0

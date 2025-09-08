@@ -1,5 +1,5 @@
 import unittest
-from MessageBox import MessageBox, DEFAULT_SIZE
+from message_box import MessageBox, DEFAULT_SIZE
 
 
 class TestMessageBox(unittest.TestCase):
