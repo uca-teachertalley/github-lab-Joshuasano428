@@ -1,15 +1,8 @@
-"""
-A simple message box implementation in Python. Able to both send and recieve messages.
-"""
-
 # Joshua Sano
 DEFAULT_SIZE = 10
 
 
 class MessageBox:
-    """
-    A simple message box class that can send and receive messages.
-    """
     def __init__(self, num_entries=DEFAULT_SIZE):
         self.my_size = num_entries
         self.count = 0
@@ -17,9 +10,6 @@ class MessageBox:
         self.empty_box = [True] * self.my_size
 
     def send(self, index, message):
-        """
-        Sends a message to the specified index in the message box.
-        """
         if index < 0 or index >= self.my_size:
             raise IndexError("Index out of bounds")
         if self.full(index):
@@ -29,9 +19,6 @@ class MessageBox:
         self.count += 1
 
     def receive(self, index):
-        """
-        Receives a message from the specified index in the message box.
-        """
         if index < 0 or index >= self.my_size:
             raise IndexError("Index out of bounds")
         if self.empty(index):
@@ -43,11 +30,6 @@ class MessageBox:
         return message
 
     def empty(self, index=None):
-        """
-        Checks if the message box or a specific position is empty.
-        If index is None, checks if the entire message box is empty.
-        Raises IndexError if index is out of bounds.
-        """
         if index is None:
             return self.count == 0
         if index < 0 or index >= self.my_size:
@@ -55,29 +37,17 @@ class MessageBox:
         return self.empty_box[index]
 
     def full(self, index=None):
-        """
-        Checks if the message box or a specific position is full.
-        """
         if index is None:
             return self.count == self.my_size
         return not self.empty(index)
 
     def get_size(self):
-        """
-        Returns the size of the message box.
-        """
         return self.my_size
 
     def get_count(self):
-        """
-        Returns the number of messages currently in the message box.
-        """
         return self.count
 
     def to_string(self):
-        """ 
-        Returns a string representation of the message box.
-        """
         result = []
         for i in range(self.my_size):
             if not self.empty(i):
@@ -85,15 +55,9 @@ class MessageBox:
         return " ".join(result)
 
     def print(self):
-        """ 
-        Prints the string representation of the message box.
-        """
         print(self.to_string())
 
     def print_verbose(self):
-        """ 
-        Prints a verbose representation of the message box.
-        """
         for i in range(self.my_size):
             if self.empty(i):
                 result = "<empty>"
@@ -106,9 +70,6 @@ class MessageBox:
 
 
 def main():
-    """
-    Main function to demonstrate the MessageBox functionality.
-    """
     # Create a MessageBox instance
     print("Creating a MessageBox with default size...")
     mb = MessageBox()
