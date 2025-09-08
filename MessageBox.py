@@ -1,3 +1,4 @@
+# Joshua Sano
 DEFAULT_SIZE = 10
 
 
