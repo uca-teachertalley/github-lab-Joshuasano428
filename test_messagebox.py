@@ -1,8 +1,14 @@
+"""
+Unit tests for the MessageBox class.
+"""
 import unittest
 from message_box import MessageBox, DEFAULT_SIZE
 
 
 class TestMessageBox(unittest.TestCase):
+    """
+    Unit tests for the MessageBox class.
+    """
     
     def setUp(self):
         """Set up test fixtures before each test method."""

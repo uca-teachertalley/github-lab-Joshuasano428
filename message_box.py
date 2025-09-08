@@ -91,6 +91,9 @@ class MessageBox:
         print(self.to_string())
 
     def print_verbose(self):
+        """ 
+        Prints a verbose representation of the message box.
+        """
         for i in range(self.my_size):
             if self.empty(i):
                 result = "<empty>"
@@ -103,6 +106,9 @@ class MessageBox:
 
 
 def main():
+    """
+    Main function to demonstrate the MessageBox functionality.
+    """
     # Create a MessageBox instance
     print("Creating a MessageBox with default size...")
     mb = MessageBox()
